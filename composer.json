@@ -1,0 +1,17 @@
+{
+    "name": "workshop/crm",
+    "description": "Car workshop",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Malik Muhammad Awan",
+            "email": "muhammad.dev.pk@gmail.com",
+            "role": "Senior PHP Laravel & Agentic AI Developer"
+        }
+    ],
+    "require": {}
+}
