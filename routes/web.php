@@ -1,6 +1,6 @@
 <?php
 
-$router0->get('/', function () {
+$router->get('/', function () {
     echo "Welcome to the Workshop Dashboard!";
 });
 
