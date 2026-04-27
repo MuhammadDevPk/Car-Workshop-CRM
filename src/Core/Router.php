@@ -35,8 +35,8 @@ class Router
             [$controllerName, $methodName] = explode('@', $callback);
             $controllerName = "App\\Controllers\\" . $controllerName;
 
-            $controllerName = new $controllerName();
-            return $controllerName->$methodName();
+            $controller = new $controllerName();
+            return $controller->$methodName($request);
         }
 
         return call_user_func($callback);

@@ -20,12 +20,14 @@ class Request
 
         if ($this->getMethod() === 'GET') {
             foreach ($_GET as $key => $value) {
+                // Sanitize input to prevent basic XSS
                 $data[$key] = filter_input(INPUT_GET, $key, FILTER_SANITIZE_SPECIAL_CHARS);
             }
         }
 
         if ($this->getMethod() === 'POST') {
             foreach ($_POST as $key => $value) {
+                // Sanitize input to prevent basic XSS
                 $data[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
             }
         }
